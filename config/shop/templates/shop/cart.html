@@ -1,0 +1,16 @@
+{% extends 'shop/base.html'%} 
+{% block content %}
+<div class="container">
+  {% for cart_item in cart_items %}
+  <div class="product">
+    <h3 class="product__title">{{ cart_item.product.name }}</h3>
+    <p class="product__price">{{ cart_item.product.price }}</p>
+    <p class="product__category">{{ cart_item.product.category.name }}</p>
+    <p class="product__quantity">{{ cart_item.quantity }}</p>
+  </div>
+  <hr />
+  {% endfor %}
+  <a href="{% url 'shop_make_order' %}">Оформить заказ</a>
+</div>
+
+{% endblock %}

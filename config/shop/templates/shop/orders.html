@@ -1,0 +1,17 @@
+{% extends 'shop/base.html'%} {% block content %}
+<div class="container">
+  {% for order in orders %}
+
+  <h3>{{ order.id }}</h3>
+  <p>{{ order.created_at}}</p>
+  {% for product in order.orderitem_set.all %}
+  <div class="product">
+    <h3 class="product__title">{{ product}}</h3>
+  </div>
+  {% endfor %}
+
+  <hr />
+  {% endfor %}
+</div>
+
+{% endblock %}

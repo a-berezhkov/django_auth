@@ -1,3 +1,17 @@
+
+## Endpoints
+
+- `/admin` - админка
+- `/account/` - все пользователи
+- `/account/register` - регистрация пользователя
+- `/account/login` - авторизация пользователя
+- `/account/logout` - выход пользователя
+- `/shop/` - список товаров
+- `/shop/detail/<int:pk>` - информация о товаре (Product)
+- `/shop/add-to-cart/<int:product_id>` - добавление товара в корзину
+- `/shop/view_cart` - просмотр корзины (Cart)
+- `/shop/orders` - список заказов (Orders)
+- `/shop/make-order` - оформить заказ (перенести из Cart в Orders)
 ## Старт
 
 ```
@@ -14,11 +28,3 @@ cd config
 python manage.py migrate
 
 ```
-
-## Endpoints
-
-- `/admin` - админка
-- `/account/` - все пользователи
-- `/account/register` - регистрация пользователя
-- `/account/login` - авторизация пользователя
-- `/account/logout` - выход пользователя

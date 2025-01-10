@@ -8,7 +8,10 @@
   <body>
     <ul>
       <li>
-        <a href="{% url 'account_index' %}">Главная</a>
+        <a href="{% url 'account_index' %}">Список аккаунтов</a>
+        <a href="{% url 'shop_index' %}">Список товаров</a>
+        <a href="{% url 'shop_view_cart' %}">Корзина</a>
+        <a href="{% url 'shop_orders' %}">Заказы</a>
         <a href="{% url 'account_login' %}">Войти</a>
         <a href="{% url 'account_register' %}">Регистрация</a>
         <a href="{% url 'account_logout' %}">Выйти</a>
